@@ -6,28 +6,22 @@
 
 1. 安装依赖
 
-  ```
-  yarn install
-	or
-	npm install
+  ```javascript
+  yarn install or npm install
   ```
 
 **请注意：** node 版本需要大于 10.13.0 的稳定版。推荐可以使用 [nvm](https://github.com/nvm-sh/nvm) 进行 node 的多版本管理。
 
 2. 本地开发时项目编译以及热加载
 
-  ```
-  yarn dev
-	or
-	npm run dev
+  ```javascript
+  yarn dev or npm run dev
   ```
 
 3. 构建
 
-  ```
-  yarn build
-	or
-	npm run build
+  ```javascript
+  yarn build or npm run build
   ```
 	构建好的文件存放在 `dist` 目录下
 
@@ -75,7 +69,7 @@
 |-- .eslintrc.js              eslint 配置文件
 |-- .gitignore                git 提交忽略文件
 |-- .prettierignore           prettier 忽略的文件
-|-- .prettierrc								prettier 插件的设置
+|-- .prettierrc     					prettier 插件的设置
 |-- commitlint.config.js      git commit 规范提交配置文件
 |-- jsconfig.json             vscode 本地文件提示
 |-- postcss.config.js         postcss 配置
