@@ -1,16 +1,97 @@
-# Changelog
+# base-template
 
-## 1.4.0
+![node version](https://img.shields.io/badge/node-%3E%3D10.13.0-blue)
 
-* 项目选择下拉菜单中增加了项目剩余时间显示
-* 制备订单管理、采集订单管理、自省制备接收管理、出库返还中增加了项目详情显示
-* 增加了出库管理-出库返还功能（目前可以新增出库返还、查看出库返还记录、关闭出库返还等）
-* 优化“存储管理”中的容器树，树过长的时候增加滚动条
-* 存储管理中如果为容器设置了容量，那么在计算使用情况的时候按照设置的容量值来进行计算
-* 修复了用户在超长时间不操作导致退出登录，重新登录时使用另外一个用户登录后用户信息不刷新的问题
-* 新增了样品转运功能
+## 开始
 
-## 1.3.3
+1. 安装依赖
 
-* 修复了开多个标签页面的时候会导致异常登录超时退出的缺陷。当用户长时间发呆导致退出登录时不再退回到登录页面，而是弹出登录框。用户可以登录后继续之前的操作。
-* 修改了制备订单的打印功能，在打印制备订单的时候可以手动打印也可以等待5秒自动开始打印。
+  ```
+  yarn install
+	or
+	npm install
+  ```
+
+**请注意：** node 版本需要大于 10.13.0 的稳定版。推荐可以使用 [nvm](https://github.com/nvm-sh/nvm) 进行 node 的多版本管理。
+
+2. 本地开发时项目编译以及热加载
+
+  ```
+  yarn dev
+	or
+	npm run dev
+  ```
+
+3. 构建
+
+  ```
+  yarn build
+	or
+	npm run build
+  ```
+	构建好的文件存放在 `dist` 目录下
+
+4. 开发工具推荐
+
+	推荐使用 [VSCode](https://code.visualstudio.com/) 进行开发，针对此项目VSCode插件推荐安装：
+	- Vetur
+	- ESLint
+	- Stylelint
+	- Prettie
+	- Vue VSCode Snippets
+	- JavaScript(ES6) Snippets ESDoc
+
+## 编码规范
+
+1. [JavaScript 代码规范](./.github/JAVASCRIPT_STYLE.md)
+2. [Css&Scss 代码规范](./.github/CSS_STYLE.md)
+3. [命名约定](./.github/NAMING.md)
+
+## 项目版本管理
+1. [Git 分支开发工作流](./.github/GIT_BRANCH_FLOW.md)
+2. [Git 提交规范](./.github/COMMIT_STYLE.md)
+
+
+## 项目目录结构说明
+
+```
+|-- .github                   规范说明
+|-- .vscode                   vscode 编辑器的一些设置文件
+|-- dist                      构建之后生成的目录
+|-- config                    webpack以及环境变量配置
+|-- scss                      公共样式存放目录
+|-- src                       项目的开发目录
+| |-- components              页面公用的组件存放的目录
+| |-- core                    工具类目录
+| |-- router                  页面路由目录
+| |-- store                   数据状态管理目录
+| |-- views                   路由页面目录
+| |-- main.js                 Vue 初始化入口文件
+| |-- App.vue                 应用配置，用来配置App全局样式以及监听
+|-- static                    资源存放目录
+|-- .babelrc                  babel 配置文件
+|-- .editorconfig             编辑器配置推荐
+|-- .eslintignore             eslint 忽略的文件
+|-- .eslintrc.js              eslint 配置文件
+|-- .gitignore                git 提交忽略文件
+|-- .prettierignore           prettier 忽略的文件
+|-- .prettierrc								prettier 插件的设置
+|-- commitlint.config.js      git commit 规范提交配置文件
+|-- jsconfig.json             vscode 本地文件提示
+|-- postcss.config.js         postcss 配置
+|-- README.md                 项目说明文件
+|-- .stylelintignore          样式规范 忽略的文件
+|-- stylelint.config.js       样式规范 配置文件
+|-- vue.config.js             vue-cli 自定义配置
+|-- webpack.config.js         webpack 配置文件
+```
+
+## 依赖
+1. [vue](https://cn.vuejs.org/index.html)：JavaScript 渐进式框架
+2. [vuex](https://vuex.vuejs.org/zh/)：状态管理
+3. [vue-router](https://cli.vuejs.org/zh/guide/cli-service.html)：路由管理器
+4. [axios](http://www.axios-js.com/zh-cn/)：http库
+5. [webpack](https://www.webpackjs.com/)： 自动化工具
+6. [eslint](https://eslint.org/)：代码检测
+7. ...
+8. ...

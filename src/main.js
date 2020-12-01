@@ -11,6 +11,7 @@ import router from '@/router';
 import store from '@/store';
 import VeeValidate, { Validator } from 'vee-validate';
 import zh from 'vee-validate/dist/locale/zh_CN';
+/* eslint-disable */
 import localForage from 'localforage';
 import 'localforage-getitems';
 import VueSweetalert2 from 'vue-sweetalert2';

@@ -5,18 +5,9 @@ import VueRouter from 'vue-router';
 import store from '../store';
 
 import web from './modules/web';
-// import admin from "./modules/admin";
-// import manage from "./modules/manage";
-// import root from "./modules/root";
-// import personal from "./modules/personal";
-// import hospital from "./modules/hospital";
-// import project from "./modules/project";
-// import asset from "./modules/asset";
-// import provider from "./modules/provider";
 
 Vue.use(VueRouter);
 // Vue.use(iView)
-// import cms from "./modules/cms";
 
 Vue.use(ViewUI);
 
