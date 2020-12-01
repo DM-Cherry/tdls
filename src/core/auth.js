@@ -17,10 +17,6 @@ axios.interceptors.request.use(
     if (token) {
       headerConfig.headers.Authorization = `${token}`;
     }
-    const siteId = store.state.SiteStore.id;
-    if (siteId && !(config.headers && config.headers['X-SITE-ID'])) {
-      headerConfig.headers['X-SITE-ID'] = siteId;
-    }
     return config;
   },
   err => {
