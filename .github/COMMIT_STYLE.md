@@ -1,6 +1,10 @@
+# Git提交规范
+
 ## 整体流程
 
-统一规范：使用WEB前端框架[AngularJS]的[Git信息提交规范]
+::: tip 参见
+[统一规范：使用WEB前端框架[AngularJS]的[Git信息提交规范]](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
+:::
 
 ## 统一规范
 ### Commit信息的格式
@@ -42,7 +46,6 @@ The version in our package.json gets copied to the one we publish, and users nee
 - revert: 如果返回之前的提交时说明的 type 类型使用 revert
 
 ### 1.2 Scope
-
 用于描述更改内容影响的范围或文件，例如：
 
 ```
@@ -63,10 +66,13 @@ Body部分主要是针对本次 `commit` 的详细描述。使用现在时；而
 包括两种情况
 
 1）Breaking changes （不兼容变动）
+
 > [Breaking changes wiki] A change in one part of a software system that potentially causes other components to fail; occurs most often in shared libraries of code used by multiple applications
+
 > 软件系统的一个部分发生变化，可能导致其他组件发生故障;在多个应用程序使用的共享代码库中经常出现.
 
 需要以 `BREAKING CHANGE:` 开头，紧跟一个空格或者两个空行，后面是本次变动的描述信息。
+
 
 2） Referencing issues （引用问题）
 
@@ -86,7 +92,6 @@ Would be better to expect case insensitive, unfortunately jasmine does
 not allow to user regexps for throw expectations.
 
 Closes #392
-Breaks foo.bar api, foo.baz should be used instead
 ```
 
 ```
@@ -131,13 +136,27 @@ The removed `inject` wasn't generaly useful for directives so there should be no
 
 ## 参考
 
-1. [AngularJS Git Commit Message Conventions]
+**[AngularJS Git Commit Message Conventions]**
 
-[Git信息提交规范]: (https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
-[AngularJS]: (https://github.com/angular/angular)
-[Commitizen]: (https://github.com/ctaodream/cz-cli)
-[conventional-changelog-cli]: (https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli)
-[Breaking changes wiki]: (https://en.wiktionary.org/wiki/breaking_change)
-[AngularJS Git Commit Message Conventions]: (https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#)
-[TortoiseGit]: (https://tortoisegit.org/)
-[Sourcetree]: (https://www.sourcetreeapp.com/)
+
+- [Git 基础学习教程](https://learngitbranching.js.org/?locale=zh_CN)
+
+- [Git信息提交规范](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
+
+- [AngularJS](https://github.com/angular/angular)
+
+- [Commitizen](https://github.com/ctaodream/cz-cli)
+
+- [conventional-changelog-cli](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli)
+
+- [Breaking changes wiki](https://en.wiktionary.org/wiki/breaking_change)
+
+- [AngularJS Git Commit Message Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#)
+
+- [TortoiseGit](https://tortoisegit.org/)
+
+- [Sourcetree](https://www.sourcetreeapp.com/)
+
+
+
+

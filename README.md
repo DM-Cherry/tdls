@@ -69,7 +69,7 @@
 |-- .eslintrc.js              eslint 配置文件
 |-- .gitignore                git 提交忽略文件
 |-- .prettierignore           prettier 忽略的文件
-|-- .prettierrc     					prettier 插件的设置
+|-- .prettierrc               prettier 插件的设置
 |-- commitlint.config.js      git commit 规范提交配置文件
 |-- jsconfig.json             vscode 本地文件提示
 |-- postcss.config.js         postcss 配置

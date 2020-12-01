@@ -1,8 +1,11 @@
-# 使用 Airbnb CSS / Sass 规范指南
+# CSS & Scss 相关规范
 
-*用更合理的方式写 CSS 和 Sass*
-
+::: tip 参见
+使用 Airbnb CSS / Sass 规范指南
 翻译自 [Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css)
+:::
+
+**用更合理的方式写 CSS 和 Sass**
 
 ## 目录
 
@@ -24,6 +27,7 @@
     - [Mixins](#mixins)
     - [扩展指令](#extend-directive)
     - [嵌套选择器](#nested-selectors)
+
 
 <a name="terminology"></a>
 ## 术语
@@ -220,9 +224,9 @@
 
 1. 属性声明
 
-    首先列出除去 `@include` 和嵌套选择器之外的所有属性声明。
+	首先列出除去 `@include` 和嵌套选择器之外的所有属性声明。
 
-    ```scss
+	```scss
     .btn-green {
       background: green;
       font-weight: bold;
@@ -232,9 +236,9 @@
 
 2. `@include` 声明
 
-    紧随后面的是 `@include`，这样可以使得整个选择器的可读性更高。
+	紧随后面的是 `@include`，这样可以使得整个选择器的可读性更高。
 
-    ```scss
+	```scss
     .btn-green {
       background: green;
       font-weight: bold;
@@ -245,9 +249,10 @@
 
 3. 嵌套选择器
 
-    _如果有必要_用到嵌套选择器，把它们放到最后，在规则声明和嵌套选择器之间要加上空白，相邻嵌套选择器之间也要加上空白。嵌套选择器中的内容也要遵循上述指引。
+	如果有必要用到嵌套选择器，把它们放到最后，在规则声明和嵌套选择器之间要加上空白，相邻嵌套选择器之间也要加上空白。嵌套选择器中的内容也要遵循上述指引。
 
-    ```scss
+
+	```scss
     .btn {
       background: green;
       font-weight: bold;
@@ -258,6 +263,7 @@
       }
     }
     ```
+
 
 <a name="variables"></a>
 ### 变量
@@ -299,3 +305,7 @@
 再说一遍: **永远不要嵌套 ID 选择器！**
 
 如果你始终坚持要使用 ID 选择器（劝你三思），那也不应该嵌套它们。如果你正打算这么做，你需要先重新检查你的标签，或者指明原因。如果你想要写出风格良好的 HTML 和 CSS，你是**不**应该这样做的。
+
+
+**[⬆ 返回目录](#目录)**
+
