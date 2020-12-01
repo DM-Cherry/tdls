@@ -5,7 +5,7 @@ module.exports = {
       2,
       'always',
       [
-        'feat', // 新功能（feature）
+        'feat', // 新功能（feature）222
         'fix', // 修补 bug
         'docs', // 文档（documentation）的变动
         'style', // 格式（不影响代码运行的变动）
