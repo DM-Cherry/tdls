@@ -13,12 +13,13 @@ axios.interceptors.request.use(
     // console.trace({config})
     // 判断是否存在token，如果存在的话，则每个http header都加上token
     const token = localStorage.getItem('jwtToken');
+    const headerConfig = config;
     if (token) {
-      config.headers.Authorization = `${token}`;
+      headerConfig.headers.Authorization = `${token}`;
     }
     const siteId = store.state.SiteStore.id;
     if (siteId && !(config.headers && config.headers['X-SITE-ID'])) {
-      config.headers['X-SITE-ID'] = siteId;
+      headerConfig.headers['X-SITE-ID'] = siteId;
     }
     return config;
   },
@@ -46,6 +47,7 @@ function getErrorMessage(error) {
 // http response 拦截器
 axios.interceptors.response.use(
   response => {
+    /* eslint-disable */
     const url = response?.config?.url || '';
   },
   error => {
