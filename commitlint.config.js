@@ -1,11 +1,12 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
+    // 数组中第一位为level，可选0,1,2，0为disable，1为warning，2为error，第二位为应用与否，可选always|never
     'type-enum': [
       2,
       'always',
       [
-        'feat', // 新功能（feature）222
+        'feat', // 新功能（feature）
         'fix', // 修补 bug
         'docs', // 文档（documentation）的变动
         'style', // 格式（不影响代码运行的变动）

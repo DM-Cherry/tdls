@@ -1,8 +1,11 @@
 // https://stylelint.io/user-guide/get-started
 // http://stylelint.cn/user-guide/rules/
 module.exports = {
+  // 错误级别 默认是error
   defaultSeverity: 'error',
+  // 扩展插件 后一项覆盖前一项，下面的内容也会覆盖extends里面对应的规则 stylelint-config-standard：推荐配置
   extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
+  // 插件列表 stylelint-order：CSS属性排序插件
   plugins: ['stylelint-scss', 'stylelint-order'],
   rules: {
     indentation: 2,
@@ -124,6 +127,7 @@ module.exports = {
         ignoreKeywords: ['/--qui-/'],
       },
     ],
+    // 禁止空源
     'no-empty-source': null,
     'order/properties-order': [
       // 指定声明块内属性的字母顺序
