@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     test() {
-      console.log('测试88888');
+      console.log('测试哈哈哈哈');
     },
   },
 };
