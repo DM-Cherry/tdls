@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     test() {
-      console.log('测试');
+      console.log('测试222');
     },
   },
 };
