@@ -13,7 +13,9 @@ export default {
     };
   },
   methods: {
-    test() {},
+    test() {
+      console.log('测试');
+    },
   },
 };
 </script>
