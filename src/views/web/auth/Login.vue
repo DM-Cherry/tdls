@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     test() {
-      console.log('再试试');
+      console.log('测试commit成功啦 ');
     },
   },
 };
