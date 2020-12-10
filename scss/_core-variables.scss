@@ -1,0 +1,25 @@
+// core overrides
+
+$border-color: $gray-300;
+
+// Navbar
+
+$navbar-brand-width: 200px;
+$navbar-brand-logo-size: 80%;
+
+// Sidebar
+
+$sidebar-width: 250px;
+$mobile-sidebar-width: 250px;
+
+// Sidebar Navigation
+
+$sidebar-bg: #082a46 !default; // #4c5b76 !default;
+$sidebar-router-link-active-bg: #051c2f !important; // #445674;
+$sidebar-nav-link-hover-bg: darken($sidebar-bg, 5%);
+$sidebar-nav-link-active-bg: darken($sidebar-bg, 5%);
+$sidebar-nav-dropdown-bg: darken($sidebar-bg, 3%);
+
+// Breadcrumb
+
+$breadcrumb-borders: 0;

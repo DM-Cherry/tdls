@@ -1,0 +1,104 @@
+.aside-menu {
+	z-index: $zindex-sticky - 1;
+	width: $aside-menu-width;
+	color: $aside-menu-color;
+	background: $aside-menu-bg;
+	@include borders($aside-menu-borders);
+
+	.nav-tabs {
+		border-color: $border-color;
+
+		.nav-link {
+			padding: $aside-menu-nav-padding-y $aside-menu-nav-padding-x;
+			color: $body-color;
+			border-top: 0;
+
+			&.active {
+				color: theme-color('primary');
+				border-right-color: $border-color;
+				border-left-color: $border-color;
+			}
+		}
+
+		.nav-item:first-child {
+			.nav-link {
+				border-left: 0;
+			}
+		}
+	}
+
+	.tab-content {
+		position: relative;
+		overflow-x: hidden;
+		overflow-y: auto;
+		border: 0;
+		border-top: 1px solid $border-color;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+
+		&::-webkit-scrollbar {
+			width: 10px;
+			margin-left: -10px;
+			-webkit-appearance: none;
+		}
+
+		// &::-webkit-scrollbar-button {    }
+
+		&::-webkit-scrollbar-track {
+			background-color: lighten($aside-menu-bg, 5%);
+			border-right: 1px solid darken($aside-menu-bg, 5%);
+			border-left: 1px solid darken($aside-menu-bg, 5%);
+		}
+
+		// &::-webkit-scrollbar-track-piece {    }
+
+		&::-webkit-scrollbar-thumb {
+			height: 50px;
+			background-color: darken($aside-menu-bg, 10%);
+			background-clip: content-box;
+			border-color: transparent;
+			border-style: solid;
+			border-width: 1px 2px;
+		}
+
+		.tab-pane {
+			padding: 0;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav-dropdown-items {
+		.nav-item {
+			width: 200px !important;
+		}
+
+		width: 200px !important;
+		overflow: hidden;
+	}
+
+	.sidebar-minimized .sidebar .nav-dropdown-items .nav-item,
+	.sidebar-minimized .sidebar .nav-dropdown-items .nav-item .nav-link,
+	.sidebar-minimized .sidebar .nav-dropdown-items .nav-item .navbar .dropdown-toggle,
+	.navbar .sidebar-minimized .sidebar .nav-dropdown-items .nav-item .dropdown-toggle {
+		width: 200px !important;
+	}
+
+	.sidebar-minimized .sidebar .nav-link:hover,
+	.sidebar-minimized .sidebar .nav-item:hover>.nav-link,
+	.sidebar-minimized .sidebar .nav-item:hover,
+	.sidebar-minimized .sidebar .navbar .dropdown-toggle:hover,
+	.navbar .sidebar-minimized .sidebar .dropdown-toggle:hover,
+	.sidebar-minimized .sidebar .navbar .nav-item:hover>.dropdown-toggle,
+	.navbar .sidebar-minimized .sidebar .nav-item:hover>.dropdown-toggle {
+		width: 250px !important;
+	}
+
+	.sidebar-minimized .sidebar .nav-item .nav-link i {
+		margin-right: 2.3rem;
+	}
+
+	// .sidebar-minimized .sidebar .nav-item.nav-dropdown .nav-link i,
+	.sidebar-minimized .nav-item .nav-dropdown-items .nav-link i {
+		margin-right: 0.5rem;
+	}
+}

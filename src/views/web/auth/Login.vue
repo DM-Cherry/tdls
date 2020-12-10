@@ -9,7 +9,7 @@ export default {
   name: 'Login',
   data() {
     return {
-      msg: '智能设备检测研究',
+      msg: '登录页面',
     };
   },
   methods: {

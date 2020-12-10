@@ -1,0 +1,76 @@
+.ivu-page {
+	font-size: 0;
+
+	>li,
+	.ivu-page-total,
+	.ivu-page-options,
+	.ivu-page-options-elevator,
+	.ivu-page-options-elevator input {
+		height: 28px;
+		line-height: 26px;
+	}
+
+	>li {
+		border-radius: 0;
+		min-width: 24px;
+		margin: 0;
+		border: 1px solid $border-color;
+		color: $primary;
+
+		&:hover {
+			background-color: $gray-200;
+			border-color: $border-color;
+		}
+	}
+
+	>li,
+	.ivu-page-total,
+	.ivu-page-options,
+	.ivu-page-options-elevator input,
+	.ivu-page-prev a,
+	.ivu-page-next a {
+		font-size: 0.76562rem;
+	}
+
+	.ivu-page-options-elevator {
+		input {
+			border-radius: 0;
+			border: 1px solid $border-color;
+		}
+	}
+
+	.ivu-page-prev,
+	.ivu-page-item {
+		border-right: 0 none;
+	}
+
+	.ivu-page-prev,
+	.ivu-page-next {
+		padding: 0 0.5rem;
+	}
+
+	.ivu-page-item-active {
+		background-color: $primary;
+		border-color: $primary;
+		color: $white;
+	}
+
+	.ivu-page-disabled {
+		color: $gray-600;
+
+		&:hover {
+			background-color: $white;
+			border-color: $border-color;
+		}
+	}
+
+	.ivu-page-total {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.ivu-page-item-jump-next,
+	.ivu-page-item-jump-prev {
+		border-right: 0 none;
+	}
+}

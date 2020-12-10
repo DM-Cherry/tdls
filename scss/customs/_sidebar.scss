@@ -1,0 +1,43 @@
+.sidebar {
+	.nav-title {
+		padding: 0.5rem 1rem;
+		font-size: 14px;
+	}
+
+	.nav-dropdown {
+		&.open {
+			border-left: 4px solid $blue;
+		}
+
+		.nav-item a {
+			padding-left: 30px;
+		}
+
+		.nav-item[data-level="2"] a {
+			padding-left: 50px;
+		}
+	}
+
+	.router-link-active {
+		background: $sidebar-router-link-active-bg !important;
+		color: #fff !important;
+
+		i {
+			color: #fff !important;
+		}
+	}
+}
+
+.sidebar-minimized {
+	.sidebar {
+		.nav-dropdown {
+			.nav-item a {
+				padding-left: 0px;
+			}
+
+			.nav-item[data-level="2"] a {
+				padding-left: 30px;
+			}
+		}
+	}
+}

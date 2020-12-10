@@ -1,0 +1,127 @@
+// Variables
+$content-placeholders-primary-color: #ccc !default;
+$content-placeholders-secondary-color: #eee !default;
+$content-placeholders-border-radius: 6px !default;
+$content-placeholders-line-height: 15px !default;
+$content-placeholders-spacing: 10px !default;
+
+
+
+// Animations
+@keyframes ContentPlaceholdersAnimation {
+	0% {
+		transform: translate3d(-30%, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(100%, 0, 0);
+	}
+}
+
+
+
+// Mixins
+@mixin content-placeholders {
+	position: relative;
+	overflow: hidden;
+	height: $content-placeholders-line-height;
+	background: $content-placeholders-secondary-color;
+
+	.content-placeholders-is-rounded & {
+		border-radius: $content-placeholders-border-radius;
+	}
+
+	.content-placeholders-is-centered & {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.content-placeholders-is-animated &::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		max-width: 1000px;
+		height: 100%;
+		background: linear-gradient(to right, transparent 0%, darken($content-placeholders-secondary-color, 5%) 15%, transparent 30%);
+		animation-duration: 1.5s;
+		animation-fill-mode: forwards;
+		animation-iteration-count: infinite;
+		animation-name: ContentPlaceholdersAnimation;
+		animation-timing-function: linear;
+	}
+}
+
+@mixin content-placeholders-spacing {
+	[class^="content-placeholders-"]+& {
+		margin-top: 2 * $content-placeholders-spacing;
+	}
+}
+
+
+
+// Styles
+.content-placeholders-heading {
+	@include content-placeholders-spacing;
+	display: flex;
+
+	&__img {
+		@include content-placeholders;
+		width: 2 * $content-placeholders-line-height + 3 * $content-placeholders-spacing;
+		height: 2 * $content-placeholders-line-height + 3 * $content-placeholders-spacing;
+		margin-right: 1.5 * $content-placeholders-spacing;
+	}
+
+	&__content {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__title {
+		@include content-placeholders;
+		width: 85%;
+		margin-bottom: $content-placeholders-spacing;
+		background: $content-placeholders-primary-color;
+	}
+
+	&__subtitle {
+		@include content-placeholders;
+		width: 90%;
+	}
+}
+
+.content-placeholders-text {
+	@include content-placeholders-spacing;
+
+	&__line {
+		@include content-placeholders;
+		width: 100%;
+		margin-bottom: $content-placeholders-spacing;
+
+		&:nth-child(4n + 1) {
+			width: 80%;
+		}
+
+		&:nth-child(4n + 2) {
+			width: 100%;
+		}
+
+		&:nth-child(4n + 3) {
+			width: 70%;
+		}
+
+		&:nth-child(4n + 4) {
+			width: 85%;
+		}
+	}
+}
+
+.content-placeholders-img {
+	@include content-placeholders;
+	@include content-placeholders-spacing;
+	width: 100%;
+	height: 120px;
+}

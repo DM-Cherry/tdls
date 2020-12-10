@@ -1,0 +1,128 @@
+.navbar .form-inline i {
+	color: #9fa1a3;
+}
+
+.navbar .form-inline .form-control {
+	min-width: 250px;
+	color: #9fa1a3;
+	border: 0;
+}
+
+.navbar .form-inline .form-control::-webkit-input-placeholder {
+	color: #9fa1a3;
+}
+
+.navbar .form-inline .form-control:-ms-input-placeholder {
+	color: #9fa1a3;
+}
+
+.navbar .form-inline .form-control::-ms-input-placeholder {
+	color: #9fa1a3;
+}
+
+.navbar .form-inline .form-control::placeholder {
+	color: #9fa1a3;
+}
+
+.navbar .form-inline .form-control::-webkit-input-placeholder {
+	color: #9fa1a3;
+}
+
+.navbar .form-inline .form-control:-moz-placeholder {
+	color: #9fa1a3;
+}
+
+.navbar .form-inline .form-control::-moz-placeholder {
+	color: #9fa1a3;
+}
+
+.navbar .form-inline .form-control:-ms-input-placeholder {
+	color: #9fa1a3;
+}
+
+.app-header.navbar {
+	border-bottom-color: #F7F7F7 !important;
+
+	.navbar-toggler {
+		border-right-color: #F7F7F7 !important;
+	}
+
+	.navbar-brand {
+		border-bottom-color: #F7F7F7 !important;
+	}
+}
+
+.ivu-notice {
+	z-index: 1060 !important;
+}
+
+.page-header {
+	background-color: #FFF;
+	border-bottom: 1px solid #e7eaec;
+}
+
+.card {
+
+	.card-footer,
+	.card-header {
+		padding: 0.5rem 0.75rem;
+	}
+}
+
+.ivu-tree ul li {
+	span.node {
+		padding: 0.3rem 0.75rem;
+	}
+
+	.z-selected span.node {
+		background: lighten($blue, 30%);
+	}
+}
+
+// 属性编辑器
+.schema-editor {
+	form {
+		padding: 0 20px;
+		text-align: left;
+	}
+
+	h2 {
+		font-size: 1.7em;
+		text-align: center;
+		margin-top: 1rem;
+		margin-bottom: .2em
+	}
+
+	h2+small {
+		display: block;
+		text-align: center;
+		margin-bottom: 1.8em
+	}
+
+	small {
+		line-height: 20px;
+		display: block;
+		color: #777;
+	}
+}
+
+#silentbox-overlay {
+	z-index: 1050 !important;
+}
+
+.category-breadcrumb {
+	border: 1px solid #e4e5e6;
+	padding: 6px 10px;
+}
+
+.text-decoration-none {
+	text-decoration: none !important;
+}
+
+.text-decoration-line-through {
+	text-decoration: line-through !important;
+}
+
+.table-operation .btn-default:hover {
+	color: $blue;
+}

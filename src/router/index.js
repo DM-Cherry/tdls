@@ -5,13 +5,14 @@ import VueRouter from 'vue-router';
 import store from '../store';
 
 import web from './modules/web';
+import project from './modules/project';
 
 Vue.use(VueRouter);
 // Vue.use(iView)
 
 Vue.use(ViewUI);
 
-const routes = [].concat(web);
+const routes = [].concat(web, project);
 
 const router = new VueRouter({
   mode: 'history',

@@ -1,0 +1,47 @@
+/* mixins.less */
+/* Reset of Placeholder text behaviour */
+/* Color of Placeholder text */
+/* forms.less */
+/* Reset of Placeholder text behaviour */
+:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/* Firefox 19+ */
+:focus:-moz-placeholder {
+  color: transparent;
+}
+
+/* Firefox 18 */
+/* Color of Placeholder text */
+::-webkit-input-placeholder {
+  color: #ccc !important;
+}
+
+::-moz-placeholder {
+  color: #ccc !important;
+  opacity: 1;
+}
+
+/* Firefox 19+ */
+:-moz-placeholder {
+  color: #ccc !important;
+  opacity: 1;
+}
+
+/* Firefox 18 */
+:-ms-input-placeholder {
+  color: #ccc !important;
+}
+
+::placeholder {
+  color: #ccc !important;
+}
+
+.placeholder {
+  color: #ccc !important;
+}

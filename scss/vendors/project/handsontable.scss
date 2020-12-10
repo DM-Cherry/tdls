@@ -1,0 +1,136 @@
+.custom-hottable .handsontable {
+  .invalid {
+    background-color: #e04560;
+  }
+
+  td {
+    height: 100%;
+    position: relative;
+
+    div.renderer-container {
+      padding: 0.25rem 0 0.25rem 0.25rem;
+      white-space: initial !important;
+      height: auto;
+      min-height: 100%;
+    }
+
+    // .read-only-container {
+    //   background-color: #eee;
+    // }
+
+    .invalid {
+      background-color: #9b0e0e;
+      color: #fff;
+    }
+
+    &.bg-color-red {
+      background-color: #e04560;
+    }
+  }
+}
+
+.handsontable {
+  td {
+    &.htColorRed {
+      color: #9b0e0e !important;
+    }
+  }
+
+  th.htHideDropdown {
+    button.changeType {
+      display: none !important;
+    }
+  }
+
+  .values-list {
+    li {
+      font-size: 13px;
+      display: flex;
+      white-space: normal !important;
+
+      .label {
+        // width: 6rem;
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
+      .badge {
+        display: block;
+        background-color: #c60d0d;
+        font-size: 10px;
+        color: #fff;
+        height: 18px;
+        margin-left: 6px;
+        position: relative;
+        line-height: 18px;
+        padding: 0 8px;
+        border-radius: 10px;
+        top: -0.3em;
+      }
+      .values {
+        color: #000;
+        font-weight: 600;
+        max-width: 10rem;
+
+        .value-tag {
+          padding: 0.3rem 0.5rem;
+          background-color: #eee;
+          margin-right: 0.3rem;
+          margin-bottom: 0.3rem;
+          display: inline-block;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .changeType {
+    border: 0px !important;
+    font-weight: bolder;
+  }
+
+  .changeType:before {
+    content: '\2191' !important;
+  }
+
+  .htAutocompleteArrow {
+    color: #2d8cf0 !important;
+  }
+
+  .htDimmed .htAutocompleteArrow {
+    color: #9999 !important;
+  }
+
+  .htAutocompleteArrow:hover {
+    color: #9999 !important;
+  }
+}
+
+.htCell-corner {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-right: 4px solid;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid;
+  border-left: 4px solid transparent;
+}
+
+.htHeaderRequired .relative {
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-right: 3px solid #f00;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #f00;
+    border-left: 3px solid transparent;
+  }
+}

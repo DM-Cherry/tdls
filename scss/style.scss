@@ -1,0 +1,36 @@
+/*!
+ * GenesisUI - Bootstrap 4 Admin Template
+ * @version v1.8.14
+ * @link https://genesisui.com
+ * Copyright (c) 2018 creativeLabs Łukasz Holeczek
+ * @license https://genesisui.com/license.html
+ */
+
+// Override Boostrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap source files
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/animate.css/animate";
+@import "node_modules/cropperjs/dist/cropper";
+@import "node_modules/uppy/src/scss/uppy";
+
+// Override core variables
+@import "core-variables";
+
+// Import core styles
+@import "core/core";
+
+// Import UI Kits
+@import "uikits/uikits";
+
+@import "customs/index";
+
+@import 'vendors/choices/index';
+
+@import 'vendors/zdbx/contextmenu';
+@import 'vendors/zdbx/placeholder';
+@import 'vendors/zdbx/handsontable';
+
+// https://the-allstars.com/vue2-animate/
+@import 'vendors/vue2-animate/vue2-animate';

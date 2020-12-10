@@ -1,0 +1,20 @@
+#form-login {
+	#dropdown-forget-password {
+		.dropdown-toggle {
+			font-size: 12px;
+			color: #999;
+			padding-top: 3px;
+			box-shadow: none;
+		}
+
+		.dropdown-item {
+			padding: 10px 15px;
+			outline: 0;
+
+			&:hover {
+				background-color: $blue;
+				color: $white;
+			}
+		}
+	}
+}
