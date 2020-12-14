@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 // 引入一堆兼容
 import 'url-search-params-polyfill';
 import 'babel-polyfill';
@@ -11,7 +12,6 @@ import router from '@/router';
 import store from '@/store';
 import VeeValidate, { Validator } from 'vee-validate';
 import zh from 'vee-validate/dist/locale/zh_CN';
-/* eslint-disable */
 import localForage from 'localforage';
 import 'localforage-getitems';
 import VueSweetalert2 from 'vue-sweetalert2';
@@ -42,13 +42,14 @@ Validator.localize('zh', zh);
 Vue.use(BootstrapVue);
 Vue.use(VueSweetalert2);
 // Vue.mixin(iviewFixer)
-
+console.log(store.state.default.storage);
 Vue.prototype.$storage = {};
-// for (let name in store.state.default.storage.localforage) {
-//   Vue.prototype.$storage[name] = localForage.createInstance(
-//     store.state.default.storage.localforage[name]
-//   )
-// }
+// eslint-disable-next-line guard-for-in
+for (const name in store.state.default.storage.localforage) {
+  Vue.prototype.$storage[name] = localForage.createInstance(
+    store.state.default.storage.localforage[name],
+  );
+}
 
 // Vue.prototype.$axios = axios
 Vue.prototype.$dayjs = dayjs;

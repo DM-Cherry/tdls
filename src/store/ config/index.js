@@ -1,3 +1,5 @@
+import storage from './storage';
+
 const state = {
   name: process.env.APP_NAME,
   default: {
@@ -16,6 +18,7 @@ const state = {
         duration: 8,
       },
     },
+    storage,
   },
 };
 export default state;

@@ -1,4 +1,19 @@
 {
+  "editor.insertSpaces": true,
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+  },
+  "[json]": {
+		"editor.tabSize": 2,
+		"editor.formatOnSave": true
+  },
+  "[vue]": {
+    "editor.tabSize": 2,
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
   //  路径补全
 	"path-intellisense.mappings": {
     "@": "${workspaceRoot}/src"
@@ -16,7 +31,7 @@
   // 临时在一段代码中取消个别规则的检查
   "eslint.enable": true,
   // 把vetur拓展的template格式化去掉
-	 "vetur.validation.template": true,
+	"vetur.validation.template": true,
 	// 对于.vue文件,关闭prettier,交给eslint fix
   "vetur.format.defaultFormatter.css": "none",
   "vetur.format.defaultFormatter.js": "prettier-eslint",
@@ -36,8 +51,11 @@
   "files.associations": {
     "*.vue": "vue"
 	},
-  // 配置 ESLint 检查的文件类型
-  "eslint.validate": ["javascript","vue","html"],
+  //配置 ESLint 检查的文件类型
+  "eslint.validate": ["javascript", "javascriptreact", {
+    "language": "vue",
+    "autoFix": false
+  }],
 	// 保存自动格式化
   "editor.formatOnSave": false,
   // 自动修复
@@ -46,6 +64,8 @@
     "source.fixAll.eslint": true, // 关闭eslint格式化工具
     "source.fixAll.stylelint": false // 关闭stylelint格式化工具
   },
+  "javascript.validate.enable": false,
+  "vetur.validation.script": false,
   // 关闭个别css的规则
   "stylelint.enable": true,
   // 设置stylelint的configOverrides选项，会覆盖已有配置

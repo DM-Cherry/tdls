@@ -1,6 +1,6 @@
 <template>
   <div>
-    仪表盘
+    仪表盘22222
   </div>
 </template>
 
